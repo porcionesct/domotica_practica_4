@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rúbrica de Evaluación Práctica 4 (Detector de movimiento)</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <style>
+        .level-4 { background-color: #d4edda; } /* Excelente - Verde claro */
+        .level-3 { background-color: #d6e9fb; } /* Avanzado - Azul claro */
+        .level-2 { background-color: #fff3cd; } /* Adecuado - Amarillo claro */
+        .level-1 { background-color: #f8d7da; } /* Iniciado - Rojo claro */
+
+        .rubric-table th:nth-child(1), .rubric-table td:nth-child(1) { width: 20%; }
+        .rubric-table th:nth-child(2), .rubric-table td:nth-child(2) { width: 20%; }
+        .rubric-table th:nth-child(3), .rubric-table td:nth-child(3) { width: 20%; }
+        .rubric-table th:nth-child(4), .rubric-table td:nth-child(4) { width: 20%; }
+        .rubric-table th:nth-child(5), .rubric-table td:nth-child(5) { width: 20%; }
+
+        .etiqueta {
+            display: inline-block;
+            font-size: 0.75em;
+            font-weight: bold;
+            padding: 2px 8px;
+            margin: 4px 4px 0 0;
+            border-radius: 10px;
+            border: 1px solid;
+        }
+        .etiqueta-peso { color: #6f42c1; border-color: #6f42c1; background: #f3eefc; }
+        .etiqueta-ce   { color: #004a99; border-color: #004a99; background: #eef4fb; }
+        .etiqueta-ra   { color: #1e7e34; border-color: #1e7e34; background: #eaf6ec; }
+
+        .puntos { display: block; font-size: 1.4em; font-weight: bold; margin-bottom: 4px; }
+        .level-4 .puntos { color: #1e7e34; }
+        .level-3 .puntos { color: #0059b3; }
+        .level-2 .puntos { color: #b8860b; }
+        .level-1 .puntos { color: #c82333; }
+
+        .weight-table th:nth-child(n+2), .weight-table td:nth-child(n+2) { text-align: center; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1> Autómatas y relés programables</h1>
+        <p>Práctica 4. Sistema de alarma. Rúbrica de Evaluación</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Práctica 4 (Alarma)</a></li>
+            <li class="active"><a href="rubrica_4.html">Rúbrica evaluación</a></li>
+            <li><a href="automata_4.html">Autómata programable</a></li>
+            <li><a href="logo_4.html">Logo</a></li>
+            <li><a href="presupuesto.html">Presupuesto</a></li>
+            <li><a href="glosario.html">Glosario</a></li>
+            <li><a href="prl.html">Seguridad y PRL</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h2>Rúbrica de Evaluación Práctica 4: Sistema de alarma</h2>
+
+        <p>UD.2 · Prácticas de taller. Esta rúbrica evalúa el funcionamiento del circuito, la transmisión del programa entre el PC y el LOGO!, las conexiones de entradas/salidas y la simulación en CADe_SIMU.</p>
+
+        <div class="section">
+            <h3 class="section-header">1. Criterios y Niveles de Logro</h3>
+            <table class="rubric-table">
+                <thead>
+                    <tr>
+                        <th>Criterio de evaluación</th>
+                        <th>Excelente (10)</th>
+                        <th>Avanzado (7)</th>
+                        <th>Adecuado (4)</th>
+                        <th>Iniciado (1)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <strong>1. Funcionamiento</strong><br>
+                            <span class="etiqueta etiqueta-peso">25%</span>
+                            <span class="etiqueta etiqueta-ce">CE: 3.6</span>
+                            <span class="etiqueta etiqueta-ra">RA: RA3</span>
+                        </td>
+                        <td class="level-4"><span class="puntos">10</span>Funciona el circuito realizado, utiliza los esquemas para realizar los montajes, trabaja de forma autónoma y cumple con el tiempo establecido.</td>
+                        <td class="level-3"><span class="puntos">7</span>Suele funcionar el circuito realizado, utiliza los esquemas para realizar los montajes y suele trabajar de forma autónoma y cumple con el tiempo establecido.</td>
+                        <td class="level-2"><span class="puntos">4</span>A veces funciona el circuito realizado, no utiliza los esquemas para realizar los montajes y no trabaja de forma autónoma y no cumple con el tiempo establecido.</td>
+                        <td class="level-1"><span class="puntos">1</span>No suele funcionar el circuito realizado, no utiliza los esquemas para realizar los montajes, no trabaja de forma autónoma y no cumple con el tiempo establecido.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>2. Transmisión PC-Logo</strong><br>
+                            <span class="etiqueta etiqueta-peso">25%</span>
+                            <span class="etiqueta etiqueta-ce">CE: 2.2</span>
+                            <span class="etiqueta etiqueta-ra">RA: RA2</span>
+                        </td>
+                        <td class="level-4"><span class="puntos">10</span>Identifica y describe correctamente las distintas técnicas de comunicación y transmisión de datos entre el PC y el PLC LOGO!, incluyendo las conexiones Ethernet y USB, cuando estén disponibles según el modelo, así como sus características, requisitos y aplicaciones.</td>
+                        <td class="level-3"><span class="puntos">7</span>Reconoce correctamente las principales técnicas de transmisión entre el PC y el PLC LOGO!, explicando su funcionamiento básico, aunque presenta alguna imprecisión menor.</td>
+                        <td class="level-2"><span class="puntos">4</span>Identifica algunas técnicas de transmisión, pero tiene dificultades para explicar sus características o los requisitos necesarios para establecer la comunicación.</td>
+                        <td class="level-1"><span class="puntos">1</span>No identifica correctamente las técnicas de transmisión entre el PC y el PLC LOGO! ni comprende los procedimientos básicos para establecer la comunicación.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>3. Conexiones e/s</strong><br>
+                            <span class="etiqueta etiqueta-peso">25%</span>
+                            <span class="etiqueta etiqueta-ce">CE: 3.3</span>
+                            <span class="etiqueta etiqueta-ra">RA: RA3</span>
+                        </td>
+                        <td class="level-4"><span class="puntos">10</span>Conecta correctamente todos los sensores y actuadores al autómata programable. Ningún conductor presenta aislamiento retirado fuera de los bornes de conexión. Todas las conexiones son firmes, seguras y presentan un acabado excelente. Trabaja de forma autónoma y finaliza dentro del tiempo establecido.</td>
+                        <td class="level-3"><span class="puntos">7</span>Conecta correctamente los sensores y actuadores, con pequeños defectos de acabado que no comprometen la seguridad. Los conductores están correctamente aislados fuera de los bornes y las conexiones son firmes. Trabaja con autonomía, aunque necesita alguna orientación puntual, y cumple el tiempo establecido.</td>
+                        <td class="level-2"><span class="puntos">4</span>Realiza las conexiones con algunos errores o defectos de acabado y necesita ayuda ocasional. Puede presentar conexiones que requieren revisión o corrección. Necesita supervisión frecuente y se retrasa respecto al tiempo establecido.</td>
+                        <td class="level-1"><span class="puntos">1</span>Realiza conexiones incorrectas o inseguras, deja conductores con aislamiento retirado fuera de los bornes o presenta conexiones flojas. El acabado es deficiente, depende constantemente de la ayuda del profesor y no finaliza la tarea en el tiempo previsto.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>4. Simulación</strong><br>
+                            <span class="etiqueta etiqueta-peso">25%</span>
+                            <span class="etiqueta etiqueta-ce">CE: 2.9</span>
+                            <span class="etiqueta etiqueta-ra">RA: RA2</span>
+                        </td>
+                        <td class="level-4"><span class="puntos">10</span>Realiza la simulación con un circuito bien diseñado, trabaja de forma autónoma y cumple con el tiempo establecido.</td>
+                        <td class="level-3"><span class="puntos">7</span>Realiza la simulación del circuito, trabaja de forma autónoma y cumple con el tiempo establecido.</td>
+                        <td class="level-2"><span class="puntos">4</span>Realiza la simulación del circuito, necesita ayuda para su finalización y no cumple con el tiempo establecido.</td>
+                        <td class="level-1"><span class="puntos">1</span>La simulación del circuito es incorrecta.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <h3 class="section-header">2. Ponderación y Cálculo de la Nota Final</h3>
+            <p>La nota final se calcula multiplicando la puntuación obtenida en cada criterio por su peso porcentual y sumando los resultados.</p>
+
+            <table class="weight-table">
+                <thead>
+                    <tr>
+                        <th>Criterio</th>
+                        <th>CE</th>
+                        <th>RA</th>
+                        <th>Puntuación Máxima</th>
+                        <th>Peso (%)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>1. Funcionamiento</td><td>3.6</td><td>RA3</td><td>10</td><td>25%</td></tr>
+                    <tr><td>2. Transmisión PC-Logo</td><td>2.2</td><td>RA2</td><td>10</td><td>25%</td></tr>
+                    <tr><td>3. Conexiones e/s</td><td>3.3</td><td>RA3</td><td>10</td><td>25%</td></tr>
+                    <tr><td>4. Simulación</td><td>2.9</td><td>RA2</td><td>10</td><td>25%</td></tr>
+                    <tr style="font-weight: bold;"><td>Total</td><td></td><td></td><td>10</td><td>100%</td></tr>
+                </tbody>
+            </table>
+
+            <h4>Fórmula de Cálculo:</h4>
+            <p><strong>Nota Final = (C1 × 0,25) + (C2 × 0,25) + (C3 × 0,25) + (C4 × 0,25)</strong></p>
+            <p>Donde C1, C2, C3 y C4 son las puntuaciones obtenidas (10, 7, 4 ó 1) en cada criterio.</p>
+            <p>Excelente = 10 pts · Avanzado = 7 pts · Adecuado = 4 pts · Iniciado = 1 pt</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
